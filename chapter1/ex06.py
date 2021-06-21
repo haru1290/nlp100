@@ -1,5 +1,6 @@
 from ex05 import n_gram
 
+
 def main():
     s1 = "paraparaparadise"
     s2 = "paragraph"
@@ -13,6 +14,7 @@ def main():
     print("差集合", X - Y)
     print("Xにseが含まれるか？", {('s', 'e')} <= X)
     print("Yにseが含まれるか？", {('s', 'e')} <= Y)
+
 
 if __name__ == "__main__":
     main()
