@@ -9,14 +9,14 @@ def get_col(path, num):
 def main():
     path = "./popular-names.txt"
 
-    col1 = get_col(path, 0)
-    col2 = get_col(path, 1)
+    name = get_col(path, 0)
+    sex = get_col(path, 1)
 
     with open("./col1.txt", "w") as f:
-        f.write("\n".join(col1))
+        f.write("\n".join(name))
 
     with open("./col2.txt", "w") as f:
-        f.write("\n".join(col2))
+        f.write("\n".join(sex))
 
 
 if __name__ == "__main__":

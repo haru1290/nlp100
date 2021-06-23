@@ -4,9 +4,9 @@ from ex12 import get_col
 def main():
     path = "./popular-names.txt"
 
-    col = get_col(path, 0)
+    name = get_col(path, 0)
 
-    print(set(col))
+    print(set(name))
 
 
 if __name__ == "__main__":

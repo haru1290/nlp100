@@ -4,10 +4,9 @@ from ex12 import get_col
 
 def main():
     path = "./popular-names.txt"
-
-    col = get_col(path, 0)
         
-    c = Counter(col)
+    c = Counter(get_col(path, 0))
+
     name = [t[0] for t in c.most_common()]
     freq = [str(t[1]) for t in c.most_common()]
 
