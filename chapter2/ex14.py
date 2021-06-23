@@ -1,4 +1,13 @@
-import sys
+from argparse import ArgumentParser
+
+
+def get_option():
+    argparser = ArgumentParser()
+
+    argparser.add_argument('-f', '--file', default='popular-names.txt')
+    argparser.add_argument('-n', '--num', default=10, type=int)
+
+    return argparser.parse_args()
 
 
 def head(path, n):
@@ -9,9 +18,9 @@ def head(path, n):
 
 
 def main():
-    path = "./popular-names.txt"
+    args = get_option()
 
-    print(head(path, sys.argv[1]))
+    print(head(args.file, args.num))
 
 
 if __name__ == "__main__":

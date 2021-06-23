@@ -1,10 +1,11 @@
+from ex10 import get_option
 import re
 
 
 def main():
-    path = "./popular-names.txt"
+    args = get_option()
 
-    with open(path, "r") as f:
+    with open(args.file, "r") as f:
         print(re.sub("\t", " ", f.read()))
 
 

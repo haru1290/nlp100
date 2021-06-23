@@ -1,11 +1,12 @@
-from collections import Counter
+from ex10 import get_option
 from ex12 import get_col
+from collections import Counter
 
 
 def main():
-    path = "./popular-names.txt"
+    args = get_option()
         
-    c = Counter(get_col(path, 0))
+    c = Counter(get_col(args.file, 0))
 
     name = [t[0] for t in c.most_common()]
     freq = [str(t[1]) for t in c.most_common()]

@@ -1,4 +1,4 @@
-import sys
+from ex14 import get_option
 
 
 def tail(path, n):
@@ -9,9 +9,9 @@ def tail(path, n):
 
 
 def main():
-    path = "./popular-names.txt"
+    args = get_option()
 
-    print(tail(path, sys.argv[1]))
+    print(tail(args.file, args.num))
 
 
 if __name__ == "__main__":

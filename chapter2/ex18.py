@@ -1,3 +1,6 @@
+from ex10  import get_option
+
+
 def sort_rows(path):
     with open(path, "r") as f:
         rows = [r.split() for r in f.readlines()]
@@ -7,9 +10,9 @@ def sort_rows(path):
 
 
 def main():
-    path = "./popular-names.txt"
+    args = get_option()
     
-    print(sort_rows(path))
+    print(sort_rows(args.file))
 
 
 if __name__ == "__main__":

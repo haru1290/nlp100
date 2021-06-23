@@ -1,10 +1,11 @@
+from ex10 import get_option
 from ex12 import get_col
 
 
 def main():
-    path = "./popular-names.txt"
+    args = get_option()
 
-    name = get_col(path, 0)
+    name = get_col(args.file, 0)
 
     print(set(name))
 

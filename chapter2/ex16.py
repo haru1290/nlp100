@@ -1,8 +1,7 @@
-import sys
+from ex14 import get_option
 
 
-def split_file(n):
-    path = "./popular-names.txt"
+def split_file(path, n):
     lst = []
     i = 0
 
@@ -19,7 +18,9 @@ def split_file(n):
 
 
 def main():
-    for rows in split_file(sys.argv[1]):
+    args = get_option()
+
+    for rows in split_file(args.file, args.num):
         print("".join(rows))
         print("size : {}".format(len(rows)))
         print("----------------------------------------")

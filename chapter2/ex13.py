@@ -1,17 +1,24 @@
+from argparse import ArgumentParser
 from ex12 import get_col
 
 
-def main():
-    path1 = "./col1.txt"
-    path2 = "./col2.txt"
-    path3 = "./col12.txt"
+def get_option():
+    argparser = ArgumentParser()
 
-    name = get_col(path1, 0)
-    sex = get_col(path2, 0)
+    argparser.add_argument('-f', '--file', default=['col1.txt', 'col2.txt', 'col12.txt'], nargs=3)
+
+    return argparser.parse_args()
+
+
+def main():
+    args = get_option()
+
+    name = get_col(args.file[0], 0)
+    sex = get_col(args.file[1], 0)
 
     merge = [w1 + "\t" + w2 for w1, w2 in zip(name, sex)]
 
-    with open(path3, "w") as f:
+    with open(args.file[2], "w") as f:
         f.write("\n".join(merge))
 
 

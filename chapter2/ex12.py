@@ -1,3 +1,15 @@
+from argparse import ArgumentParser
+from ex10 import get_option
+
+
+def get_option():
+    argparser = ArgumentParser()
+
+    argparser.add_argument('-f', '--file', default=['popular-names.txt', 'col1.txt', 'col2.txt'], nargs=3)
+
+    return argparser.parse_args()
+
+
 def get_col(path, num):
     with open(path, "r") as f:
         rows = [r.split() for r in f.readlines()]
@@ -7,15 +19,15 @@ def get_col(path, num):
 
 
 def main():
-    path = "./popular-names.txt"
+    args = get_option()
 
-    name = get_col(path, 0)
-    sex = get_col(path, 1)
+    name = get_col(args.file[0], 0)
+    sex = get_col(args.file[0], 1)
 
-    with open("./col1.txt", "w") as f:
+    with open(args.file[1], "w") as f:
         f.write("\n".join(name))
 
-    with open("./col2.txt", "w") as f:
+    with open(args.file[2], "w") as f:
         f.write("\n".join(sex))
 
 
