@@ -5,9 +5,9 @@ import re
 def main():
     args = get_option()
 
-    with open(args.file, "r") as f:
-        print(re.sub("\t", " ", f.read()))
+    with open(args.corpus) as f:
+        print(re.sub('\t', ' ', f.read()))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

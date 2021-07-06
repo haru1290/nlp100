@@ -1,19 +1,19 @@
-from ex14 import get_option
+from ex10 import get_option
 
 
 def tail(path, n):
-    with open(path, "r") as f:
+    with open(path) as f:
         rows = f.readlines()
 
-    return "".join(rows[-int(n):])
+    return ''.join(rows[-int(n):])
 
 
 def main():
     args = get_option()
 
-    print(tail(args.file, args.num))
+    print(tail(args.corpus, args.num))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
 

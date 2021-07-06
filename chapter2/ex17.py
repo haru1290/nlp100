@@ -5,7 +5,7 @@ from ex12 import get_col
 def main():
     args = get_option()
 
-    name = get_col(args.file, 0)
+    name = get_col(args.corpus, 0)
 
     print(set(name))
 
