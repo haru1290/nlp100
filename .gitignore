@@ -1,7 +1,3 @@
-chapter*/__pycache__/
-chapter*/*.txt
-chapter*/*.json
-chapter*/*.png
-chapter*/*.gv
-chapter*/*.mecab
-chapter*/*.parsed
+__pycache__/
+data/
+result/
