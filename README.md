@@ -10,9 +10,9 @@
 
 ~~[第5章：係り受け懐石](https://github.com/haru1290/nlp100/blob/main/notebooks/chapter05.ipynb)~~
 
-~~[第6章：機械学習](https://github.com/haru1290/nlp100/tree/main/chap06)~~
+~~第6章：機械学習~~
 
-~~[第7章：単語ベクトル](https://github.com/haru1290/nlp100/tree/main/chap07)~~
+~~第7章：単語ベクトル~~
 
 ~~第8章：ニューラルネット~~
 
